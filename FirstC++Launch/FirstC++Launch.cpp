@@ -3,13 +3,29 @@
 
 #include <iostream>
 #include <cstdlib> // для system
+#include <string>
+#include <format>
 using namespace std;
 int main()
 
 {
     setlocale(0, "");
-    for (int i = 0; i < 99; i++) {
-        cout << i <<"\n";
+    string trylive[10];
+    int n = sizeof(trylive)/sizeof(trylive[0]);// вот так получается длина массива
+    cout << n << "\n";
+    try {
+        for (int i = 0; i < n; i++) {
+            string full;
+            full.append("Ы - ");
+            trylive[i]= full+to_string(i);
+        }
+        for (int i = 0; i < n; i++) {
+           cout << trylive[i]<<"\n";
+        }
+        system("pause");
+    }
+    catch (char *str) {
+        cout << str <<"\n";
     }
     return 0;
 }
