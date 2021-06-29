@@ -8,47 +8,9 @@ int main()
 
 {
     setlocale(0, "");
-    int type, repeat;
-    double a, b, c(5.5);
-    cout << "Введите первое число: ";
-    cin >> a;
-    cout << "Введите второе число: ";
-    cin >> b;
-    cout << "Выберите тип операции \n";
-    cout << "1)Сложение \n";
-    cout << "2)Вычитание \n";
-    cout << "3)Умножение \n";
-    cout << "4)Деление \n";
-    repeat = 1;
-    c = 0;
-    while (repeat == 1) {
-        cout << "Введите номер операции \n";
-        cin >> type;
-        switch (type)
-        {
-        case 1:
-            c = a + b;
-            repeat = 0;
-            break;
-        case 2:
-            c = a - b;
-            repeat = 0;
-            break;
-        case 3:
-            c = a * b;
-            repeat = 0;
-            break;
-        case 4:
-            c = a / b;
-            repeat = 0;
-            break;
-        default:
-            cout << "Введено некоретное значение ";
-            repeat = 1;
-            break;
-        }
+    for (int i = 0; i < 99; i++) {
+        cout << i <<"\n";
     }
-    cout << "Результат = " << c;
     return 0;
 }
 
